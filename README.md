@@ -1,5 +1,5 @@
 
-# Use this repo as an alternative of RedHat Labs for RH124
+# RedHat Labs for RH124 running on VirtualBox
 
 ## Requirement
 
@@ -15,10 +15,12 @@
 > 6.1.12r139181
 
 ### topology
-    
+
+```    
    bastion	172.25.250.254
    servera	172.25.250.10
    serverb	172.25.250.11
+```
 
 ### plugins
 to install the vagran plugin run the following command:
