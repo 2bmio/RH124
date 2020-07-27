@@ -30,5 +30,8 @@ vagrant plugin install vagrant-hostmanager
 ```
 
 ### default credentials
+
+```
 user: root
 pass: toor
+```
