@@ -6,6 +6,16 @@
 +  VirtualBox
 +  Vagrant
 
+### Plugins
+to get the lab up and runngin install this plugins:
+
+```
+# Please first install this plugins
+
+vagrant plugin install vagrant-hostmanager
+vagrant plugin install vagrant-vbguest
+```
+
 ### Usage
 
 ```
@@ -19,7 +29,7 @@ vagrant down
 vagrant destroy -f
 ```
 
-### Synced folder between HOST (your metal machine) and GUEST (workstation)
+### Synced folder between HOST (your machine) and GUEST (workstation)
 
 ```
    HOST                     GUEST
@@ -50,15 +60,6 @@ VBoxManage list runningvms
    "workstation" {9683fabe-2332-4439-9534-76ec40e66a81}
    "servera" {13ff8c3f-334d-48e8-aba9-c923149b7eb7}
    "serverb" {8598bea6-10be-4470-9d9e-140acca0cac8}
-```
-
-
-### plugins
-to get the lab up and runngin install this plugins:
-
-```
-vagrant plugin install vagrant-hostmanager
-vagrant plugin install vagrant-vbguest
 ```
 
 ### default credentials
