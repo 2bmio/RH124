@@ -23,10 +23,27 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           '--groups', '/RH124'
         ]
         v.name = machines["bastion_vmname"]
+        v.memory = 1024
+        v.cpus = 2
+      end
+  end
+
+  config.vm.define machines["workstation_vmname"] do |workstation|
+      workstation.vm.box = "centos/8"
+      workstation.vm.hostname = machines["workstation_hostname"]
+      workstation.vm.network "private_network", ip: machines["workstation_ip"]
+      workstation.vm.provision "shell", path: "./extras/initial-setup.sh"
+      workstation.vm.provider "virtualbox" do |v|
+        v.customize [
+          'modifyvm', :id,
+          '--groups', '/RH124'
+        ]
+        v.name = machines["workstation_vmname"]
         v.memory = 2048
         v.cpus = 2
       end
   end
+
 
   config.vm.define machines["servera_vmname"] do |servera|
       servera.vm.box = "centos/8"

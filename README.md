@@ -1,10 +1,20 @@
 
-# RedHat Labs for RH124 running on VirtualBox
+# RedHat Lab for RH124 running on VirtualBox
 
-## Requirement
+### Requirement
 
 +  VirtualBox
 +  Vagrant
+
+### Usage
+
+```
+vagrant up
+
+vagrant down
+
+vagrant destroy -f
+```
 
 ### vagrant --version
 
