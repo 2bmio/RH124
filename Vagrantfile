@@ -6,7 +6,7 @@ require 'yaml'
 # Read YAML file with box details
 machines = YAML.load_file('./extras/machines.yaml')
 
-# Deatils of vagrant file
+# Magic ↓ ~~ ↓
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.hostmanager.enabled = true
   config.hostmanager.manage_host = true
@@ -43,7 +43,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         v.cpus = 2
       end
   end
-
 
   config.vm.define machines["servera_vmname"] do |servera|
       servera.vm.box = "centos/8"

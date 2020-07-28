@@ -1,5 +1,5 @@
 ---
-# Configuration of Hostnames for  RH124
+# Hostname config. for RH124
 ## bastion
 bastion_hostname: 'bastion.lab.example.com'
 bastion_ip: '172.25.250.254'

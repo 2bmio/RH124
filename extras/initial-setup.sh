@@ -22,6 +22,5 @@ sed -i 's/^SELINUX=.*/SELINUX=enforcing/g' /etc/selinux/config
 # Firewall enabled
 systemctl enable --now firewalld
 
-# # System timezone
-# timedatectl set-timezone Europe/Madrid --isUtc --ntpservers=0.centos.pool.ntp.org,1.centos.pool.ntp.org,2.centos.pool.ntp.org,3.centos.pool.ntp.org
-
+# # System timezone on Europe/Madrid
+timedatectl set-timezone Europe/Madrid
