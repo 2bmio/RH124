@@ -9,3 +9,5 @@ useradd student -G wheel
 
 echo "redhat" | passwd --stdin root
 echo "student" | passwd --stdin student
+
+dnf install vim -y
