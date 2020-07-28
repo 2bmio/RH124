@@ -18,6 +18,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       bastion.vbguest.auto_update = false
       bastion.vm.network "private_network", ip: machines["bastion_ip"]
       bastion.vm.provision "shell", path: "./extras/initial-setup.sh"
+      bastion.vm.synced_folder '.', '/vagrant', disabled: true
       bastion.vm.provider "virtualbox" do |v|
         v.customize [
           'modifyvm', :id,
@@ -82,6 +83,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       servera.vbguest.auto_update = false
       servera.vm.network "private_network", ip: machines["servera_ip"]
       servera.vm.provision "shell", path: "./extras/initial-setup.sh"
+      servera.vm.synced_folder '.', '/vagrant', disabled: true
       servera.vm.provider "virtualbox" do |v|
         v.customize [
           'modifyvm', :id,
@@ -99,6 +101,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       serverb.vbguest.auto_update = false
       serverb.vm.network "private_network", ip: machines["serverb_ip"]
       serverb.vm.provision "shell", path: "./extras/initial-setup.sh"
+      serverb.vm.synced_folder '.', '/vagrant', disabled: true
       serverb.vm.provider "virtualbox" do |v|
         v.customize [
           'modifyvm', :id,
