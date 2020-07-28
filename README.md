@@ -9,6 +9,9 @@
 ### Usage
 
 ```
+# The first time it take around 30 min for setup and make essentials configurations
+# Next time vagrant need just a few seconds... 
+
 vagrant up
 
 vagrant down
