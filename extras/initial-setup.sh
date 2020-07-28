@@ -6,7 +6,6 @@ sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd
 systemctl restart sshd
 
 # Mange users
-
 useradd student -G wheel
 echo "redhat" | passwd --stdin root
 echo "student" | passwd --stdin student
