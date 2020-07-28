@@ -16,6 +16,13 @@ vagrant down
 vagrant destroy -f
 ```
 
+### Synced folder between HOST (your metal machine) and GUEST (workstation)
+
+```
+   HOST                     GUEST
+./synced ←←← →→→ /home/student/synced
+```
+
 ### vagrant --version
 
 > Vagrant 2.2.9
@@ -44,10 +51,11 @@ VBoxManage list runningvms
 
 
 ### plugins
-to install the vagran plugin run the following command:
+to get the lab up and runngin install this plugins:
 
 ```
 vagrant plugin install vagrant-hostmanager
+vagrant plugin install vagrant-vbguest
 ```
 
 ### default credentials
