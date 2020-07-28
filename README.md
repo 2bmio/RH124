@@ -44,5 +44,8 @@ vagrant plugin install vagrant-hostmanager
 
 ```
 user: root
-pass: toor
+pass: redhat
+
+user: student
+pass: student
 ```
