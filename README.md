@@ -26,10 +26,11 @@ vagrant destroy -f
 
 ### topology
 
-```    
-   bastion	172.25.250.254
-   servera	172.25.250.10
-   serverb	172.25.250.11
+```
+172.25.250.254    bastion        bastion.lab.example.com
+172.25.250.9      workstation	   workstation.lab.example.com
+172.25.250.10     servera        servera.lab.example.com
+172.25.250.11     serverb        serverb.lab.example.com
 ```
 
 ### plugins
