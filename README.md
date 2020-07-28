@@ -7,10 +7,9 @@
 +  Vagrant
 
 ### Plugins
-to get the lab up and runngin install this plugins:
 
 ```
-# Please first install this plugins
+# Please first install this plugins:
 
 vagrant plugin install vagrant-hostmanager
 vagrant plugin install vagrant-vbguest
