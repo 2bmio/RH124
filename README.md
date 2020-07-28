@@ -21,10 +21,13 @@ vagrant plugin install vagrant-vbguest
 # The first time it take around 30 min for setup and make essentials configurations
 # Next time vagrant need just a few seconds... 
 
+# ignition! this command setup or turn on all the machines
 vagrant up
 
+# shutdown! this command turn off all the machiness
 vagrant down
 
+# danger! this command remove all the machines
 vagrant destroy -f
 ```
 
