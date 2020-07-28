@@ -1,13 +1,27 @@
 #!/bin/bash
 
-#-- allow root and password auth
+# Allow root and password auth
 sed -i 's/#PermitRootLogin yes/PermitRootLogin yes/' /etc/ssh/sshd_config
 sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
 systemctl restart sshd
 
-useradd student -G wheel
+# Mange users
 
+useradd student -G wheel
 echo "redhat" | passwd --stdin root
 echo "student" | passwd --stdin student
 
-dnf install vim -y
+# Cross installation packages
+dnf install -y vim-enhanced bash-completion
+
+# httpd bind dhcp-server tftp-server
+
+# SELinux enabled
+sed -i 's/^SELINUX=.*/SELINUX=enforcing/g' /etc/selinux/config
+
+# Firewall enabled
+systemctl enable --now firewalld
+
+# # System timezone
+# timedatectl set-timezone Europe/Madrid --isUtc --ntpservers=0.centos.pool.ntp.org,1.centos.pool.ntp.org,2.centos.pool.ntp.org,3.centos.pool.ntp.org
+

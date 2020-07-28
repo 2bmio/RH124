@@ -33,6 +33,16 @@ vagrant destroy -f
 172.25.250.11     serverb        serverb.lab.example.com
 ```
 
+### Vbox List
+```
+VBoxManage list runningvms
+   "bastion" {ecb55eeb-7de3-4ecc-a812-71b29fb1c89f}
+   "workstation" {9683fabe-2332-4439-9534-76ec40e66a81}
+   "servera" {13ff8c3f-334d-48e8-aba9-c923149b7eb7}
+   "serverb" {8598bea6-10be-4470-9d9e-140acca0cac8}
+```
+
+
 ### plugins
 to install the vagran plugin run the following command:
 
