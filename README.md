@@ -24,6 +24,19 @@ vagrant plugin install vagrant-vbguest
 # ignition! this command setup or turn on all the machines
 vagrant up
 
+# if you make some change on the extras files, to apply it use the flag --provission
+vagrant up --provision
+
+######### the prompt ask you for chose the bridge interface, in my case eth0
+######### put the number of your interface and hit enter.
+
+1) eth0
+2) docker0
+    bastion: Which interface should the network bridge to? 1
+
+#########
+
+
 # shutdown! this command turn off all the machiness
 vagrant down
 
@@ -50,6 +63,8 @@ vagrant destroy -f
 
 ```
 172.25.250.254    bastion        bastion.lab.example.com
+192.168.1.222     use this ip for LAN access 
+
 172.25.250.9      workstation    workstation.lab.example.com
 172.25.250.10     servera        servera.lab.example.com
 172.25.250.11     serverb        serverb.lab.example.com

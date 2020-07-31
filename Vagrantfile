@@ -17,7 +17,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       bastion.vm.hostname = machines["bastion_hostname"]
       bastion.vbguest.auto_update = false
       bastion.vm.network "private_network", ip: machines["bastion_ip"]
+      bastion.vm.network "public_network", ip: machines["bastion_ip_pub"]
       bastion.vm.provision "shell", path: "./extras/initial-setup.sh"
+      bastion.vm.provision "shell", path: "./extras/bastion-setup.sh"
       bastion.vm.synced_folder '.', '/vagrant', disabled: true
       bastion.vm.provider "virtualbox" do |v|
         v.customize [
